@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weather</title>
+</head>
+<body>
+
+{% if country %}
+    <h2>Country: {{country}}</h2>
+{% endif %}
+
+<h2>City: {{city}}</h2>
+
+{% if lon %}
+    <h2>Lon.: {{lon}}</h2>
+{% endif %}
+
+{% if lat %}
+    <h2>Lat.: {{lat}}</h2>
+{% endif %}
+
+{% if weather %}
+    <h2>Weather: {{weather}}</h2>
+{% endif %}
+
+{% if country %}
+    <h2>Temperature: {{temperature}}</h2>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %} homework 1 {% endblock %}
+
+{% block content %}
+<h1> Homework 1 </h1>
+
+<hr>
+<h3> Task 1: Run Django on port 80 for the link http://localhost/lesson_1/ to work </h3>
+<h4>Links with port 8000:</h4>
+    <li><a href="http://localhost:8000/lesson_1/">http://localhost:8000/lesson_1/</a> </li>
+    <li><a href="http://127.0.0.1:8000/lesson_1/">http://127.0.0.1:8000/lesson_1/</a> </li>
+<h4>Links with port 80:</h4>
+    <li><a href="http://localhost:80/lesson_1/">http://localhost:80/lesson_1/</a> </li>
+    <li><a href="http://127.0.0.1:80/lesson_1/">http://127.0.0.1:80/lesson_1/</a> </li>
+
+<hr>
+<h3> Task 2: Create a new app lesson 1_1 </h3>
+
+<hr>
+<h3> Task 3: Create the 'Hello world' HTML page at http://localhost/lesson_1_1/ </h3>
+    <li> <a href="http://localhost:8000/lesson_1_1/">http://localhost:8000/lesson_1_1/</a>  </li>
+    <li> <a href="http://127.0.0.1:8000/lesson_1_1/">http://127.0.0.1:8000/lesson_1_1/</a>  </li>
+
+<hr>
+<h3> Task 4: Install, configure, and run the Django server. Display the simplest HTML page
+    with the inscription "Hello World!". </h3>
+{% endblock %}

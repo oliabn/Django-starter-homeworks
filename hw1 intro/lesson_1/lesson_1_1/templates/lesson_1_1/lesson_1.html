@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %} lesson_1 {% endblock %}
+
+{% block content %}
+<h1> Task 1 </h1>
+<p>Run Django on port 80 for the link http://localhost/lesson_1/ to work</p>
+
+<h4>Links with port 8000:</h4>
+    <li><a href="http://localhost:8000/lesson_1/">http://localhost:8000/lesson_1/</a></li>
+    <li><a href="http://127.0.0.1:8000/lesson_1/">http://127.0.0.1:8000/lesson_1/</a></li>
+<h4>Links with port 80:</h4>
+    <li><a href="http://localhost:80/lesson_1/">http://localhost:80/lesson_1/</a></li>
+    <li><a href="http://127.0.0.1:80/lesson_1/">http://127.0.0.1:80/lesson_1/</a></li>
+{% endblock %}
