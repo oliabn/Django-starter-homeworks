@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} title {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+
+<body>
+
+    <header align="left">
+        <ul>
+            <li><a href="http://127.0.0.1:8000/star_wars/luke">Luke</a></li>
+            <li><a href="http://localhost:8000/star_wars/leia">Leia</a></li>
+            <li><a href="http://localhost:8000/star_wars/hun">Hun</a></li>
+        </ul>
+    </header>
+
+    {% block content %}
+        content
+    {% endblock %}
+
+</body>
+</html>

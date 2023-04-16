@@ -1,0 +1,13 @@
+{% extends 'questions\layout.html' %}
+
+{% block title %} Questions {% endblock %}
+
+{% block content %}
+
+  {% for question in question_list %}
+    <li><a href="http://127.0.0.1:8000/questions/{{ question.id }}/"> Question {{ question.id }} </a></li>
+  {% empty %}
+    <p> No questions </p>
+  {% endfor %}
+
+{% endblock %}

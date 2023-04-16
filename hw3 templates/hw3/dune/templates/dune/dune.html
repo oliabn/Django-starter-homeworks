@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dune</title>
+</head>
+<body>
+
+<h3>Dune</h3>
+
+<ol>
+    {% for person in dune_data %}
+        <li> {{ person.name }} {{ person.surname }} </li>
+    {% empty %}
+        <p> No data </p>
+    {% endfor %}
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>to do list</title>
+</head>
+<body>
+<h1>To do list:</h1>
+
+{% for task in to_do_list|dictsortreversed:'priority' %}
+    <h4>Task{{ forloop.counter }}:</h4>
+    <li>{{ task.task }}</li>
+    <li>Priority {{ task.priority }}</li>
+    <p></p>
+{% empty %}
+    <p>Nothing to do</p>
+{% endfor %}
+
+</body>
+</html>
