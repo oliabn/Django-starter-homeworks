@@ -1,7 +1,8 @@
 import requests
 import json
+from .tokens import WEATHER_TOKEN
 
-WEATHER_TOKEN = "Your token here"
+
 WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 
@@ -19,6 +20,7 @@ def parse_weather_data(data: dict, status: int, city: str) -> dict:
     """Parses a dict of weather data obtained from the site OpenWeather
      and forms a dictionary with the necessary information."""
     if status != 200:
+        print(status)
         weather_data = {
             'country': None,
             'city': f'<{city}> city does not exist!',
