@@ -19,10 +19,10 @@ class Review(models.Model):
                     (5, 'Perfect'))
 
     email = models.EmailField(max_length=70, unique=True)
-    content = models.TextField(blank=True, max_length=200, null=True)
+    content = models.TextField(blank=True, max_length=200, null=True, default=None)
     photo = models.ImageField(upload_to="task4/media/photos/%Y/%m/%d/", blank=True, null=True)
     score = models.IntegerField(default=3, choices=CHOICE_SCORE)
-    phone = PhoneNumberField(blank=True, null=True, default=None, )
+    phone = PhoneNumberField(blank=True, null=True, default=None)
     # phone = models.CharField(max_length=12, null=True, blank=True)
     is_positive = models.BooleanField(default=True, verbose_name='Is it positive review')
     time_create = models.DateTimeField(auto_now_add=True)
