@@ -24,7 +24,7 @@ class ArticleAddingForm(forms.ModelForm):
 
         # title validation
         title = data.get('title')
-        # get all titles from Article table
+        # get title from Article table
         qs = Article.objects.all().filter(title__icontains=title)
         # Checking if the title already exists. Not accept already existing title
         if qs.exists():
