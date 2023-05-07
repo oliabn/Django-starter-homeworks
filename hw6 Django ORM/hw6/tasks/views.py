@@ -7,7 +7,6 @@ class BooksView(TemplateView):
     template_name = 'tasks/books.html'
 
     def get(self, request):
-
         context = {
             # get all books from db sorted by date
             'all_books': Book.objects.all().order_by('-pub_date'),
@@ -21,6 +20,5 @@ class BooksView(TemplateView):
             'books_with_some_letter': Book.objects.all().filter(name__startswith='T'),
             # get books whose names contain "100"
             'books_with_number': Book.objects.all().filter(name__contains='100'),
-
         }
         return render(request, self.template_name, context)
