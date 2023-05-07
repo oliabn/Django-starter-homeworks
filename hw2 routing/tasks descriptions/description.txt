@@ -1,0 +1,29 @@
+Task 1:
+Make an urls.py file that:
+· directs the URL from home/' to the views.home method and sets the name for this URL as 'home-view';
+· directs the URL from 'book/{chapter name}/' to the views method. Book along with the title of 
+the chapter as the title argument and sets the name for this URL as 'book';
+· passes requests starting with 'lesson_2/' to the 'lesson_2.urls' module along with the remainder of the URL.
+
+Task 2:
+Make urls.py file that:
+·   directs the URL from 'index/' to the views.index method and sets the name for that URL as 'index-view'.
+·   directs the URL from 'bio/{username}/' to the views.bio method with the username as the username argument and sets the name for this URL as 'bio'.
+·   passes requests starting with 'lesson_1/' to the 'lesson_1.urls' module along with the remainder of the URL.
+
+Task3:
+1. Register on the Weather Open API website.
+2. Get your APPID.
+3. Make a test request and get the weather in your city, use GUIDE for it.
+4. Add a /weather/?city=... route to your Django app.
+5. Show a Django template with this info to the user.
+6. If the city doesn't exist, show a warning to the current user using HttpResponse with the following text: City {city} does not exist!
+
+You need to show the following information to the current user.
+Your user can be from any country like Ukraine, USA, Canada, Italy, etc.
+Let's imagine that frontend sends us some information about the user's city in the query params and we have to make a request using the "OpenWeather" API to get detailed info:
+    * Country: ...
+    * City: ...
+    * Coords: ... (lon, lat)
+    * Weather: ... (like Clouds e.t.c)
+    * Temp: ... (convert it into Celsius)

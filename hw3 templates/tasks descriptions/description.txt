@@ -1,0 +1,58 @@
+Task 1:
+There is the following list:
+lets_do_it = [{'priority': 100, 'task': 'Make a to-do list'}, 
+		  {'priority': 150, 'task': 'Learn Django'},
+              {'priority': 1, 'task': 'Think about the meaning of life'}]
+Display it in the view.
+
+Task 2:
+Structure the site so that you have a main page with a welcome and links to other
+ pages of the site: Welcome to the universe of Star Wars! Select a page:
+· Luke
+· Leia
+· Khan
+
+· Luke's page:
+Luke Skywalker is one of the main characters of the Star Wars universe, a Jedi, 
+the son of Naboo Padme Senator Amidala Naberry and Jedi Knight Anakin Skywalker.
+· Leia's page:
+Leia Organa is the daughter of Jedi Knight Anakin Skywalker and Senator 
+Padmé Amidala Naberry.
+· Khan's page:
+Han Solo is the pilot of the spaceship "Millennium Falcon", his flight engineer 
+and co-pilot is a Wookiee named Chewbacca.
+
+Task 3
+Create a view and your HTTPResponse that would send users a file with the text "Here's your file" and code 227.
+
+Task 4
+Make a view that will use different types of responses: file, JSON, HTML, and text, Implement several Functions.
+
+Task 5:
+There is such a list:
+lets_do_it = [{'priority': 100, 'task': 'Make a to-do list'}, 
+              {'priority': 150, 'task': 'Learn Django'},
+              {'priority': 1, 'task': 'Think about the meaning of life'}]
+Output it by template and sort it in descending order of priority.
+
+Task6:
+Create a template and use it in a view that outputs a list of dictionaries that stores the information:
+[{'name': 'Shaddam IV', 'surname': 'Corrino'}, 
+ {'name': 'Gender', 'surname': 'Atreides'}, 
+ {'name': 'Franklin', 'surname': 'Herbert'}]
+
+Using the for a tag in the form of a list:
+<ol>
+         <li> {name} {surname} </li>
+</ol>
+
+Task7:
+There is a list:
+latest_question_list = [{'id': 1, 'question_text': 'What is the meaning of life?'}, 
+                        {'id': 2, 'question_text': 'What is primary: spirit or matter?'}, 
+                        {'id': 3, 'question_text': 'Does free will exist?'}]
+It is necessary to make a template that checks the value of the variable latest_question_list, 
+and if this list is not empty, then outputs its question elements in the form of an HTML list <li>, 
+where a link to "/polls/<int:question_id>/" with the text question is indicated. question_text. 
+If the list is empty, the line "Question list is empty" is displayed.
+Also, create a view that uses this template.

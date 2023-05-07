@@ -1,0 +1,27 @@
+Task 1:
+Study and understand all the advantages and disadvantages of the tools that were discussed in the lesson.
+
+Task 2:
+Create several models and implement a many-to-many relationship between them and try to run migrations.
+
+Task 3:
+Create 5 records in the database for each model.
+
+Task 4:
+Create models for an online store that will meet the following criteria:
+· The model should contain all the fields you consider necessary.
+· Add a relationship between models.
+· All standard fields must be empty.
+· Add models to at least 5 products.
+
+Task 5:
+Create several models and try to run migrations. Change models and run migrations. Do this process several times and see how the tables in the database change.
+
+Task 6:
+Try to connect Postgres to the project and run migrations to this database. Try models without relationships first, and then models with one-to-one relationships.
+
+Task 7:
+Update the models from the previous task for the online store:
+· add null True;
+· change model fields;
+· edit field parameters.

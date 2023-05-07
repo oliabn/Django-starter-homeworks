@@ -1,0 +1,15 @@
+Task 1:
+Run Django on port 80 for the link http://localhost/lesson_1/ to work
+
+Task 2:
+Create a new application lesson_1_1
+
+Task 3:
+Create the following HTML page at http://localhost/lesson_1_1/:
+<p>Hello World!</p>
+<p>Django is one of the largest Python frameworks</p>
+<hr>
+
+Task 4:
+Install, configure, and run the Django server. Display the simplest 
+HTML page with the inscription "Hello World!".

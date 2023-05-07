@@ -1,0 +1,17 @@
+Task 1:
+Study and understand all the advantages and disadvantages of the tools that were discussed in the lesson.
+
+Task 2:
+Create several user authorization forms.
+
+Task 3:
+Find information about ModelForm and create several such forms.
+
+Task 4:
+Create a product feedback form for an online store. The form should have:
+· image file;
+· user mail;
+· description;
+· choice of assessment;
+· negative or positive feedback;
+· phone number.
