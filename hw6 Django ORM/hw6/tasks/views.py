@@ -4,9 +4,15 @@ from .models import Author, Book
 
 
 class BooksView(TemplateView):
+    """View for displaying the data that is taken from the
+     Book table"""
+
     template_name = 'tasks/books.html'
 
     def get(self, request):
+        """Getting the necessary data from the Book table and
+        sending it to the template by the context dic"""
+
         context = {
             # get all books from db sorted by date
             'all_books': Book.objects.all().order_by('-pub_date'),
