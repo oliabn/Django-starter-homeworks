@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Books</h1>
+
+{% block content %}
+
+<!-- All books table (sorted by date)-->
+<h4> All books (sorted by date): Book.objects.all().order_by('-pub_date') </h4>
+<table border = '1' cellpadding="5px">
+    <tr style = 'background :  #0077b3; color: white;'>
+        <td>ID</td>
+        <td>Authors</td>
+        <td>Name</td>
+        <td>Genre</td>
+        <td>Description</td>
+        <td>Publication date </td>
+    </tr>
+    {% for book in all_books %}
+    <tr>
+        <td>{{book.id}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.genre}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.pub_date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p></p>
+
+<!-- Name filter table -->
+<h4> Name filter: Book.objects.filter(name='The Green Mile') </h4>
+<table border = '1' cellpadding="5px">
+    <tr style = 'background :  #0077b3; color: white;'>
+        <td>Authors</td>
+        <td>Name</td>
+        <td>Genre</td>
+        <td>Description</td>
+        <td>Publication date </td>
+    </tr>
+    {% for book in name_filter %}
+    <tr>
+        <td>{{book.author}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.genre}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.pub_date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- Author surname filter table -->
+<h4> Author surname filter: Book.objects.filter(author__surname='King') </h4>
+<table border = '1' cellpadding="5px">
+    <tr style = 'background :  #0077b3; color: white;'>
+        <td>Authors</td>
+        <td>Name</td>
+        <td>Genre</td>
+        <td>Description</td>
+        <td>Publication date </td>
+    </tr>
+    {% for book in author_surname %}
+    <tr>
+        <td>{{book.author}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.genre}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.pub_date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- Books of some period table -->
+<h4> The books were published in a certain period of years:
+    Book.objects.filter(pub_date__year__gte=2005, pub_date__year__lte=2015) </h4>
+<table border = '1' cellpadding="5px">
+    <tr style = 'background :  #0077b3; color: white;'>
+        <td>Authors</td>
+        <td>Name</td>
+        <td>Genre</td>
+        <td>Description</td>
+        <td>Publication date </td>
+    </tr>
+    {% for book in books_of_some_period %}
+    <tr>
+        <td>{{book.author}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.genre}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.pub_date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- Books whose names start with the letter "T" -->
+<h4> Books whose names start with the letter "T":
+    Book.objects.all().filter(name__startswith='T') </h4>
+<table border = '1' cellpadding="5px">
+    <tr style = 'background :  #0077b3; color: white;'>
+        <td>Authors</td>
+        <td>Name</td>
+        <td>Genre</td>
+        <td>Description</td>
+        <td>Publication date </td>
+    </tr>
+    {% for book in books_with_some_letter %}
+    <tr>
+        <td>{{book.author}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.genre}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.pub_date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- get books whose names contain "100"   -->
+<h4> Books whose names contain "100":
+    Book.objects.all().filter(name__contains='100') </h4>
+<table border = '1' cellpadding="5px">
+    <tr style = 'background :  #0077b3; color: white;'>
+        <td>Authors</td>
+        <td>Name</td>
+        <td>Genre</td>
+        <td>Description</td>
+        <td>Publication date </td>
+    </tr>
+    {% for book in books_with_number %}
+    <tr>
+        <td>{{book.author}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.genre}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.pub_date}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+Task 1:
+Study and understand all the advantages and disadvantages of
+the tools that were discussed in the lesson.
+
+Task 2:
+Create new models that will be relevant to many, run migrations,
+and try to use all the filters that were discussed in the lesson.
+
+Task 3:
+Practice extracting data. Extract data and send it to the page
+using a GET request.
+
+Task 4:
+Extract data from created models. Extract data that starts with
+the capital letter "T" Extract data that includes a number.
+Sort data by creation date.
